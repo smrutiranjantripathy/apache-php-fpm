@@ -32,7 +32,7 @@ apache:
     - /path/to/docroot:/var/www/html/docroot
 ```
 
-> Please free feel free to report the issues in comments section.
+> Please free feel free to raise issues.
 
 
 
