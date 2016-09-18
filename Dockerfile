@@ -4,10 +4,6 @@ MAINTAINER Smruti Ranjan Tripathy <smrutirtripathy@gmail.com>
 # Setting frontend Noninteractive
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
-#Setting Europe/Paris Time-zone 
-#RUN echo Europe/Paris  > /etc/timezone
-RUN echo Europe/Paris | sudo tee /etc/timezone && sudo dpkg-reconfigure --frontend noninteractive tzdata
-
 # Avoid ERROR: invoke-rc.d: policy-rc.d denied execution of start.
 RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d
 
