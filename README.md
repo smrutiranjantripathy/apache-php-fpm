@@ -20,7 +20,7 @@ Hosting A Web Application
 ```
 docker run --name apache -v /path/to/docroot:/var/www/html/docroot smtripat/apache-2.4.7-php-fpm-7.1:latest
 ```
-*Mapping the Port 80 of the container to your local machine or test machine port 8080(or any other port).*
+*Mapping the Port 80 of the container to your local machine or host machine port 8080(or any other port).*
 ```
 docker run -p 8080:80 --name apache -v /path/to/docroot:/var/www/html/docroot smtripat/apache-2.4.7-php-fpm-7.1:latest
 ```
