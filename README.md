@@ -4,7 +4,7 @@ This Image serves the purpose of testing your application with Apache 2.4.7 and 
 
 To Start the Container
 -------------------------------
-```docker run --name apache smtripat/apache-2.4.7-php-fpm-7.1:latest```
+```docker run --name apache smtripat/apache-php-fpm:latest```
 
 
 
@@ -12,22 +12,22 @@ Docker Compose
 ------------------------
 ```
 apache: 
-   image: smtripat/apache-2.4.7-php-fpm-7.1:latest
+   image: smtripat/apache-php-fpm:latest
 ```
 Hosting A Web Application
 ------------------------------------
 *Docroot is the path where the code directory is mounted.*
 ```
-docker run --name apache -v /path/to/docroot:/var/www/html/docroot smtripat/apache-2.4.7-php-fpm-7.1:latest
+docker run --name apache -v /path/to/docroot:/var/www/html/docroot smtripat/apache-php-fpm:latest
 ```
 *Mapping the Port 80 of the container to your local machine or host machine port 8080(or any other port).*
 ```
-docker run -p 8080:80 --name apache -v /path/to/docroot:/var/www/html/docroot smtripat/apache-2.4.7-php-fpm-7.1:latest
+docker run -p 8080:80 --name apache -v /path/to/docroot:/var/www/html/docroot smtripat/apache-php-fpm:latest
 ```
 *Using Docker-Compose*
 ```
 apache:
-  image: smtripat/apache-2.4.7-php-fpm-7.1:latest
+  image: smtripat/apache-php-fpm:latest
   volumes:
     - /path/to/docroot:/var/www/html/docroot
 ```
